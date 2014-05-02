@@ -15,9 +15,11 @@ def main(file_path):
             vals = line.split('\t')
             repo = vals[1]
             accession = vals[2]
-            longest = sorted(vals, key=lambda k: len(k), reverse=True)[0].replace('\n', '').replace('\r', '')
-            if longest.startswith('http'): continue
-            if len(longest) < 100: continue
+# ls           longest = sorted(vals, key=lambda k: len(k), reverse=True)[0].replace('\n', '').replace('\r', '')
+# ls           if longest.startswith('http'): continue
+# ls           if len(longest) < 100: continue
+# article reference is in column 8 in the data table/spreadsheet that combines repos
+            longest = vals[8]
             print '\t'.join((repo, accession, longest))
 
 if __name__ == '__main__':
