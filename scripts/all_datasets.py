@@ -83,7 +83,7 @@ if __name__ == '__main__':
                     
                     if gs_col is None: gs = 0
 # ls: do we want to account for NA's like this?
-                    elif: gs_col == 'NA': gs = 0
+                    elif gs_col == 'NA': gs = 0
                     else: 
                         gs = line[gs_col].split()[0]
                         if not gs.strip(): gs = 0
